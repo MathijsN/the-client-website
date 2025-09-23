@@ -1,1 +1,1 @@
-// JS
+console.log("hello world")
