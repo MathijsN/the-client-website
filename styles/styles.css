@@ -1,3 +1,50 @@
-h1 {
-    color: rebeccapurple;
+:root {
+    --color-gray: #676767;
+    --color-blue: #002544;
+
+    interpolate-size: allow-keywords;
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1rem;
+    color: var(--color-blue);
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+}
+
+form {
+    width: 14.25rem;
+    position: relative;
+    color: var(--color-gray);
+    margin: auto;
+    padding: 2rem 0;
+}
+
+form > img {
+    position: absolute;
+    top: 0.7rem;
+    right: 5%;
+}
+
+img {
+    max-width: 10rem;
+}
+
+.filter-list {
+    display: flex;
+}
+
+.filter-list button {
+    background-color: white;
+    border: 0;
+}
+
