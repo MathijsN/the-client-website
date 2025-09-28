@@ -1,147 +1,57 @@
-:root {
-    --color-blue: #002544;
-    --color-light-blue: #8fbbe0;
-    --color-gray: #676767;
-    --color-light-gray: #EFEFEF;
-
-    interpolate-size: allow-keywords;
-}
-
-* {
+*,*::after,*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--color-blue);
-}
-
-/* Grid items */
-
-summary {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0.7rem 1.5rem;
-
-    @media (width > 1279px) {
+section {
+    
+    button  {
+        display: grid;
         grid-template-columns: repeat(4, 1fr);
-        transition: 0.2s;
+        width: 100%;
+        text-align: left;
+        padding: 1rem 2rem;
+
+        p:nth-of-type(1) {
+            grid-column: span 2;
+        }
+        p:last-of-type {
+            text-align: right;
+        }
     }
-}
 
-summary:hover {
-    @media (any-pointer: fine) {
-        scale: 1.01;
-        transition: 0.2s;
-        cursor: pointer;
-    }
-}
-
-details:nth-of-type(odd) {
-    background-color: var(--color-light-gray);
-}
-
-summary h4 {
-    grid-column: span 2;
-}
-
-summary p:first-of-type {
-    display: none;
-    align-self: center;
-
-    @media (width > 1279px) {
-        display: block;
-        margin-left: 2rem;
-    }
-}
-
-summary p:last-of-type {
-    text-align: end;
-    align-self: center;
-}
-
-
-
-/* Grid titles */
-
-
-.grid-template {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    font-size: 0.8rem;
-    margin: 1rem 0;
-    padding: 0 1.5rem;
-    color: var(--color-gray);
-
-    @media (width > 1279px) {
+    ul {
+        display: grid;
         grid-template-columns: repeat(4, 1fr);
+        padding: 0;
     }
-}
 
-.author-template {
-    display: none;
-
-    @media (width > 1279px) {
-        display: block;
-        margin-left: 2rem;
+    ul li {
+        list-style: none;
     }
+
+    ul li:nth-of-type(1) {
+        grid-column: span 2;
+    }
+
+    ul li:last-of-type {
+        text-align: right;
+    }
+    
 }
 
-.grid-template p:first-of-type {
-    grid-column: span 2;
-}
-.grid-template p:last-of-type {
-    text-align: end;
-}
-
-
-
-/* Expendable info section */
-
-details[open] {
-    transition: 1s;
+[popover] {
+    position: absolute;
+    margin-inline: 0;
+    margin-bottom: 0;
 }
 
-.info-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.2rem 1.5rem;
-    border-bottom: 1px solid var(--color-light-blue);
-    /* position: absolute; */
-    background-color: white;
-    width: 100%;
-    /* bottom: 50%; */
-    transition: 1s;
-}
 
-.more-info-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    background-color: white;
-    padding: 2rem 1.5rem;
-    /* margin-bottom: 3rem; */
-    border-bottom: 1px solid var(--color-blue);
-}
 
-section div.img-wrapper {
-    width: 9.813rem;
-    height: 14.813rem;
-    object-fit: cover;
-}
+/* 
+Tip van Rick
 
-.img-wrapper img {
-    width: 100%;
-    height: 100%;
-}
+Grid of leuke animaties voor popover
 
-.more-info-container button {
-    background-color: var(--color-blue);
-    color: var(--color-light-gray);
-    border: 1px solid var(--color-gray);
-
-    height: 2.813rem;
-    width: 9.125rem;
-}
+*/

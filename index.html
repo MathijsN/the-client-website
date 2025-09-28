@@ -1,83 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalogue</title>
+    <!-- <link rel="stylesheet" href="styles/styles.css" /> -->
   </head>
   <body>
+    <header>
+      <h1>Catalogue</h1>
+    </header>
     <main>
-      <div class="grid-template">
-        <p>Title</p>
-        <p class="author-template">Author</p>
-        <p>Year</p>
-      </div>
-      <details>
-        <summary>
-          <h4>
-            Ideologische zwerftochten. Verzamelde opstellen ter gelegenheid van
-            zijn zeventigste verjaardag aan de schrijver aangeboden
-          </h4>
-          <p>Benjamin, Frank</p>
-          <p>1930</p>
-        </summary>
-        <section>
-          <div class="info-container">
-            <p>Info</p>
-            <!-- <img src="assets/exit.svg" alt="Exit icon"> -->
-          </div>
-          <div class="more-info-container">
-            <div class="img-wrapper">
-            <img src="assets/book-img-placeholder.png" alt="Image of the book">
-            </div>
-            <button>Meer info</button>
-          </div>
+      <form action="">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search on title, SKU, author..."
+        />
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <button popovertarget="my-popover1">
+                Probable sources of the numbers on which Jabirian alchemy was
+                based
+              </button>
+              <section popover id="my-popover1">
+                <h2>Test</h2>
+                <img
+                  src="assets/book-img-placeholder.png"
+                  alt="image of the digitalized version of the book"
+                />
+                <p>Genre is: book</p>
+              </section>
+            </td>
+            <td>Frank, Benjamin</td>
+            <td>1930</td>
+          </tr>
+          <tr>
+            <td>
+              <button popovertarget="my-popover2">
+                Clef de la comédie anti-catholique de Dante Alighieri Pasteur de
+                l'Église albigeoise dans la ville de Florence, affilié à l'Ordre
+                du Temple, donnant l'explication du langage symbolique des
+                fidèles d'amour dans les compositions lyriques romans et époées
+                chevaleresques des troubadours
+              </button>
+              <section popover id="my-popover2">
+                <h2>Test</h2>
+                <img
+                  src="assets/book-img-placeholder.png"
+                  alt="image of the digitalized version of the book"
+                />
+                <p>Genre is: Roman</p>
+              </section>
+            </td>
+            <td>Frank, Benjamin</td>
+            <td>1856</td>
+          </tr>
+          <tr>
+            <td>
+              <button popovertarget="my-popover3">
+                Das Buch vom lebendigen Gott
+              </button>
+              <section popover id="my-popover3">
+                <h2>Test</h2>
+                <img
+                  src="assets/book-img-placeholder.png"
+                  alt="image of the digitalized version of the book"
+                />
+                <p>Genre is: Fiction</p>
+              </section>
+            </td>
+            <td>Frank, Benjamin</td>
+            <td>1981</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section>
+        <ul>
+          <li>Title</li>
+          <li>Author</li>
+          <li>Year</li>
+        </ul>
+        <button popovertarget="my-popover">
+          <p>Das Buch vom lebendigen Gott</p>
+          <p>Frank, Benjamin</p>
+          <p>1981</p>
+        </button>
+        <section popover id="my-popover" class="popover">
+          <h2>Test</h2>
+          <img
+            src="assets/book-img-placeholder.png"
+            alt="image of the digitalized version of the book"
+          />
+          <p>Genre is: Fiction</p>
+          <a href="">More info</a>
         </section>
-      </details>
-      <details>
-        <summary>
-          <h4>
-            Mystische Fibel. Ein Handbuch fur die Schüler der praktischen Mystik.
-          </h4>
-          <p>Benjamin, Frank</p>
-          <p>1930</p>
-        </summary>
-        <section>
-          <div class="info-container">
-            <p>Info</p>
-            <!-- <img src="assets/exit.svg" alt="Exit icon"> -->
-          </div>
-          <div class="more-info-container">
-            <div class="img-wrapper">
-            <img src="assets/book-img-placeholder.png" alt="Image of the book">
-            </div>
-            <button>Meer info</button>
-          </div>
-        </section>
-      </details>
-      <details>
-        <summary>
-          <h4>
-            Der brennende Busch.
-Der entschleiertje Weg der Mystik
-          </h4>
-          <p>Benjamin, Frank</p>
-          <p>1930</p>
-        </summary>
-        <section>
-          <div class="info-container">
-            <p>Info</p>
-            <!-- <img src="assets/exit.svg" alt="Exit icon"> -->
-          </div>
-          <div class="more-info-container">
-            <div class="img-wrapper">
-            <img src="assets/book-img-placeholder.png" alt="Image of the book">
-            </div>
-            <button>Meer info</button>
-          </div>
-        </section>
-      </details>
+      </section>
     </main>
   </body>
 </html>
