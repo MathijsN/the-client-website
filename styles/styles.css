@@ -12,10 +12,24 @@ section {
         width: 100%;
         text-align: left;
         padding: 1rem;
+        cursor: pointer;
+
+
+        span {
+            align-self: center;
+        }
 
         span:last-of-type {
             text-align: right;
         }
+    }
+
+    button:nth-of-type(even) {
+        background-color: white;
+        border: 0;
+    }
+    button:nth-of-type(even):hover {
+        background-color: rgb(205, 205, 205);
     }
 
     ul {
