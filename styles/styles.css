@@ -6,7 +6,17 @@
 
 body {
     margin-inline: 1rem;
+    font-family: sans-serif;
 }
+
+input::after {
+    content: url("../assets/Search.svg");
+    width: 12px;
+    height: 12px;
+}
+
+
+
 
 section {
     
@@ -17,7 +27,6 @@ section {
         text-align: left;
         padding: 1rem;
         cursor: pointer;
-
         border: 0;
 
         @media (width > 468px) {
@@ -85,15 +94,11 @@ section {
             text-align: right;
         }
     }
-
-
     
 }
 
 [popover] {
-    position: absolute;
-    margin-inline: 0;
-    margin-bottom: 0;
+
 }
 
 

@@ -12,6 +12,7 @@
     </header>
     <main>
       <form action="">
+        <label for="search">Search for books:</label>
         <input
           type="search"
           name="search"
@@ -22,23 +23,34 @@
       <section>
         <h3>Hier komt header 2</h3>
         <p>En hier komt een korte uitleg over wat deze pagina is.</p>
+
         <ul>
           <li>Title</li>
           <li>Author</li>
           <li>Year</li>
         </ul>
+
         <button popovertarget="my-popover">
           <span>Das Buch vom lebendigen Gott</span>
           <span>Frank, Benjamin</span>
           <span>1981</span>
         </button>
         <section popover id="my-popover" class="popover">
-          <h2>Test</h2>
+          <h2>Das Buch vom lebendigen Gott</h2>
           <img
             src="assets/book-img-placeholder.png"
             alt="image of the digitalized version of the book"
           />
-          <p>Genre is: Fiction</p>
+          <ul>
+            <li>Genre: Fiction</li>
+            <li>Year: 1556</li>
+            <li>UBN: 12307</li>
+            <li>Redactor: Faleti, Girolamo</li>
+            <li>Place of publication: Venice</li>
+            <li>Keywords: gnosis</li>
+            <li>Shelf mark: Gn J, II</li>
+            <li>BPH State Collection shelf mark: no</li>
+          </ul>
           <a href="">More info</a>
         </section>
         <button popovertarget="my-popover3">
@@ -49,24 +61,10 @@
                 fidèles d'amour dans les compositions lyriques romans et époées
                 chevaleresques des troubadours
           </span>
-          <span>Frank, Benjamin</span>
-          <span>1981</span>
+          <span>Athenagoras, Faleti, Girolamo</span>
+          <span>1556</span>
         </button>
         <section popover id="my-popover3" class="popover">
-          <h2>Test</h2>
-          <img
-            src="assets/book-img-placeholder.png"
-            alt="image of the digitalized version of the book"
-          />
-          <p>Genre is: Fiction</p>
-          <a href="">More info</a>
-        </section>
-        <button popovertarget="my-popover4">
-          <span>Das Buch vom lebendigen Gott</span>
-          <span>Frank, Benjamin</span>
-          <span>1981</span>
-        </button>
-        <section popover id="my-popover4" class="popover">
           <h2>Test</h2>
           <img
             src="assets/book-img-placeholder.png"
