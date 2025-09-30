@@ -1,3 +1,11 @@
+/* Mijn gebruikte breakpoints:
+350px
+468px
+672px
+1279px
+*/
+
+
 *,*::after,*::before {
     box-sizing: border-box;
     margin: 0;
@@ -28,7 +36,7 @@ header {
     position: sticky;
     top: 0;
 
-    img:nth-of-type(2) {
+    a + img {
         @media (width > 1279px) {
             display: none;
         }
@@ -56,6 +64,90 @@ header {
     }
 }
 
+
+/* Hero section main page */
+
+.hero {
+    @media (width > 1279px) {
+        display: flex;
+        height:85vh;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.hero div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    h1 {
+        line-height: 90%;
+        font-weight: 500;
+        font-size: clamp(2rem, 10vw, 8rem);
+        max-width: 40rem;
+
+        margin: 0;
+
+        display: none;
+
+        @media (width > 1279px) {
+            display: block;
+        }
+    }
+
+    .hero-img-wrapper {
+        width: 60%;
+        margin-inline: 1rem;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.opening-info {
+    @media (width > 469px) {
+        display: flex;
+        justify-content: space-between;
+
+        div:nth-of-type(3) {
+        text-align: right;
+    }
+    }
+
+    div:nth-of-type(1), div:nth-of-type(3) {
+        display: flex;
+        flex-direction: column;
+
+        @media (width > 1279px) {
+            flex-direction: row;
+        }
+    }
+
+    p {
+        margin-block: 0.5rem;
+    }
+
+    .scroll-indicator {
+        align-self: flex-end;
+
+        img {
+            display: none;
+
+            @media (width > 672px) {
+                display: block;
+
+                background-color: white;
+                border: 1px solid var(--color-blue);
+                border-radius: 100%;
+                padding: 1rem;
+            }
+        }
+    }
+
+}
 
 
 
@@ -89,6 +181,7 @@ form {
 
 h1 {
      font-size: clamp(2rem, 5vw, 6rem);
+     font-weight: 300;
 }
 
 h1, p, form {
