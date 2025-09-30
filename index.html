@@ -20,7 +20,7 @@
           placeholder="Search on title, SKU, author..."
         />
       </form>
-      <section>
+      <section class="data-table">
         <h3>Hier komt header 2</h3>
         <p>En hier komt een korte uitleg over wat deze pagina is.</p>
 
@@ -35,43 +35,26 @@
           <span>Frank, Benjamin</span>
           <span>1981</span>
         </button>
-        <section popover id="my-popover" class="popover">
-          <h2>Das Buch vom lebendigen Gott</h2>
-          <img
-            src="assets/book-img-placeholder.png"
-            alt="image of the digitalized version of the book"
-          />
+        <section popover id="my-popover">
+          <h2>Info</h2>
+          <h3>Das Buch vom lebendigen Gott</h3>
           <ul>
-            <li>Genre: Fiction</li>
-            <li>Year: 1556</li>
-            <li>UBN: 12307</li>
-            <li>Redactor: Faleti, Girolamo</li>
-            <li>Place of publication: Venice</li>
-            <li>Keywords: gnosis</li>
-            <li>Shelf mark: Gn J, II</li>
-            <li>BPH State Collection shelf mark: no</li>
+              <li>Year: 1556</li>
+              <li>Genre: Fiction</li>
+              <li>UBN: 12307</li>
+              <li>Redactor: Faleti, Girolamo</li>
+              <li>Place of publication: Venice</li>
+              <li>Keywords: gnosis</li>
+              <li>Shelf mark: Gn J, II</li>
+              <li>BPH State Collection shelf mark: no</li>
           </ul>
-          <a href="">More info</a>
-        </section>
-        <button popovertarget="my-popover3">
-          <span>
-                Clef de la comédie anti-catholique de Dante Alighieri Pasteur de
-                l'Église albigeoise dans la ville de Florence, affilié à l'Ordre
-                du Temple, donnant l'explication du langage symbolique des
-                fidèles d'amour dans les compositions lyriques romans et époées
-                chevaleresques des troubadours
-          </span>
-          <span>Athenagoras, Faleti, Girolamo</span>
-          <span>1556</span>
-        </button>
-        <section popover id="my-popover3" class="popover">
-          <h2>Test</h2>
-          <img
-            src="assets/book-img-placeholder.png"
-            alt="image of the digitalized version of the book"
-          />
-          <p>Genre is: Fiction</p>
-          <a href="">More info</a>
+          <div class="popover-cta-wrapper">
+            <img
+              src="assets/book-img-placeholder.png"
+              alt="image of the digitalized version of the book"
+            />
+            <a href="">More info</a>
+          </div>
         </section>
       </section>
     </main>

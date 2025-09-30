@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+:root {
+    --color-blue: #002544;
+}
+
 body {
     margin-inline: 1rem;
     font-family: sans-serif;
@@ -58,8 +62,8 @@ input {
 }
 
 
-section {
-    
+.data-table {
+    position: relative;
     button  {
         display: grid;
         grid-template-columns: 3fr 1fr;
@@ -109,7 +113,7 @@ section {
         }
     }
 
-    ul {
+    > ul {
         display: grid;
         grid-template-columns: 3fr 1fr;
         padding: 1rem;
@@ -138,15 +142,63 @@ section {
 }
 
 [popover] {
-    background-color: red;
+    background-color: #F4F4F4;
+    padding: 1rem;
+    border: 0;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 
-    img {
-        width: 100%;
+    h2 {
+        font-size: 1rem;
+        font-weight: 400;
+        padding-block: 1.5rem;
+        border-bottom: 1px solid var(--color-blue);
+        margin-bottom: 2rem;
+    }
+
+    > ul {
+
+        li {
+            list-style: none;
+            margin-block: 0.2rem;
+        }
+
+        li:last-of-type {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .popover-cta-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        img {
+            width: 10rem;
+            height: 15rem;
+        }
+
+        a {
+            background-color: var(--color-blue);
+            color: white;
+            height: max-content;
+            width: max-content;
+            padding: 1.2rem 3rem ;
+            text-decoration: none;
+        }
     }
 }
 
 
-
+[popover]:popover-open {
+    .data-table {
+        filter: blur(10px);
+    }
+}
 
 
 
