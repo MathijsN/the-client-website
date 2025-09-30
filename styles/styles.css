@@ -9,13 +9,53 @@ body {
     font-family: sans-serif;
 }
 
-input::after {
-    content: url("../assets/Search.svg");
-    width: 12px;
-    height: 12px;
+/* Navigation bar */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+
+    img:nth-of-type(2) {
+        @media (width > 1279px) {
+            display: none;
+        }
+    }
+
+    nav {
+        display: none;
+
+        @media (width > 1279px) {
+            display: flex;
+        }
+        ul {
+            display: flex;
+            
+            li {
+                margin-inline: 1rem;
+                list-style: none;
+    
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
 }
 
 
+
+
+
+/* Search form */
+
+input {
+    background-image: url("../assets/Search.svg");
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+}
 
 
 section {
@@ -98,8 +138,15 @@ section {
 }
 
 [popover] {
+    background-color: red;
 
+    img {
+        width: 100%;
+    }
 }
+
+
+
 
 
 
