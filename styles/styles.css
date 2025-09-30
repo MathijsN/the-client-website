@@ -147,6 +147,7 @@ input {
     border: 0;
     width: 100vw;
     position: absolute;
+    inset: auto;
     left: 0;
     bottom: 0;
 
