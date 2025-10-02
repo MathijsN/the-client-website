@@ -211,8 +211,7 @@ form {
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  /* font-size: clamp(2rem, -8.688rem + 8.3705vw, 6rem); */
+  font-size: clamp(3rem, 5vw, 4rem);
   font-weight: 300;
 }
 
@@ -228,6 +227,11 @@ form {
   position: relative;
 
   .form-info-wrapper {
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
     @media (width > 672px) {
       display: flex;
       justify-content: space-between;
