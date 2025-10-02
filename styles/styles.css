@@ -313,17 +313,7 @@ form {
   }
 }
 
-
-
-
-
 /* Popover */
-[popover] {
-    transition: display 1s;
-    transition-behavior: allow-discrete;
-    /* animation: open 0.5s reverse; */
-}
-
 
 [popover]:popover-open {
   background-color: #f4f4f4;
@@ -388,7 +378,7 @@ form {
     justify-self: left;
 
     @media (width > 789px) {
-        justify-self: center;
+      justify-self: center;
     }
 
     li {
@@ -409,9 +399,9 @@ form {
     gap: 1rem;
 
     @media (width > 789px) {
-        justify-content: end;
-        flex-direction: column;
-        flex-wrap: nowrap;
+      justify-content: end;
+      flex-direction: column;
+      flex-wrap: nowrap;
     }
 
     img {
@@ -433,7 +423,6 @@ form {
 
 [popover]::backdrop {
   animation: backdrop-open 0.25s forwards;
-
 }
 
 /* 
