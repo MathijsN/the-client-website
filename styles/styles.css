@@ -313,6 +313,18 @@ form {
   }
 }
 
+
+
+
+
+/* Popover */
+[popover] {
+    transition: display 1s;
+    transition-behavior: allow-discrete;
+    /* animation: open 0.5s reverse; */
+}
+
+
 [popover]:popover-open {
   background-color: #f4f4f4;
   padding: 1rem;
@@ -322,7 +334,6 @@ form {
   inset: auto;
   left: 0;
   bottom: 0;
-
   display: grid;
 
   animation: open 0.5s forwards;
@@ -420,12 +431,9 @@ form {
   }
 }
 
-[popover]:popover-closed {
-    animation: open 1s reverse;
-}
-
 [popover]::backdrop {
   animation: backdrop-open 0.25s forwards;
+
 }
 
 /* 
@@ -448,6 +456,10 @@ Grid of leuke animaties voor popover
   0% {
     height: 0;
     transform: scale(0);
+    display: none;
+  }
+  1% {
+    display: grid;
   }
 
   75% {
@@ -467,15 +479,5 @@ Grid of leuke animaties voor popover
   to {
     backdrop-filter: blur(10px);
     background-color: rgba(101, 101, 101, 0.283);
-  }
-}
-
-@keyframes close {
-  0% {
-    height: max-content;
-  }
-
-  100% {
-    height: 0;
   }
 }
