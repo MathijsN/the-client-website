@@ -313,7 +313,7 @@ form {
   }
 }
 
-[popover] {
+[popover]:popover-open {
   background-color: #f4f4f4;
   padding: 1rem;
   border: 0;
@@ -322,6 +322,22 @@ form {
   inset: auto;
   left: 0;
   bottom: 0;
+
+  display: grid;
+
+  animation: open 0.5s forwards;
+  transform-origin: bottom center;
+  overflow: hidden;
+
+  @media (width > 789px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    .popover-cta-wrapper {
+      display: grid;
+      justify-content: end;
+    }
+  }
 
   .popover-heading-wrapper {
     display: flex;
@@ -358,7 +374,11 @@ form {
 
   > ul {
     margin-bottom: 2rem;
-    justify-self: center;
+    justify-self: left;
+
+    @media (width > 789px) {
+        justify-self: center;
+    }
 
     li {
       list-style: none;
@@ -377,6 +397,12 @@ form {
     flex-wrap: wrap;
     gap: 1rem;
 
+    @media (width > 789px) {
+        justify-content: end;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
     img {
       width: 15rem;
       height: 20rem;
@@ -394,28 +420,11 @@ form {
   }
 }
 
-[popover]:popover-open {
-  display: grid;
-
-  animation: open 0.5s forwards;
-  transform-origin: bottom center;
-  overflow: hidden;
-
-  @media (width > 789px) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-
-    .popover-cta-wrapper {
-      display: grid;
-      justify-content: end;
-    }
-  }
+[popover]:popover-closed {
+    animation: open 1s reverse;
 }
 
 [popover]::backdrop {
-  /* backdrop-filter: blur(10px);
-  background-color: rgba(101, 101, 101, 0.283); */
-
   animation: backdrop-open 0.25s forwards;
 }
 
