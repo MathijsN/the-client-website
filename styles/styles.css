@@ -461,6 +461,24 @@ form {
 
 /* Popover */
 
+
+[popover] {
+  transition: 
+  opacity 1s ease-out, 
+  height 1s allow-discrete,
+  scale 1s ease,
+  display 1s allow-discrete;
+  
+  
+  opacity: 0;
+  height: 0;
+  scale: 0;
+  backdrop-filter: blur(0);
+  background-color: rgba(101, 101, 101, 0);
+  overflow:hidden;
+}
+
+
 [popover]:popover-open {
   background-color: #f4f4f4;
   padding: 1rem;
@@ -471,10 +489,26 @@ form {
   left: 0;
   bottom: 0;
   display: grid;
-
+/* 
   animation: open 0.5s forwards;
   transform-origin: bottom center;
-  overflow: hidden;
+  overflow: hidden; */
+
+  transform-origin: bottom center;
+
+     opacity: 1;
+  height: max-content;
+  scale: 1;
+  
+  overflow:hidden;
+  
+  @starting-style {
+    opacity: 0;
+    height: 0;
+    scale: 0;
+  }
+
+
 
   @media (width > 789px) {
     grid-template-columns: repeat(3, 1fr);
@@ -568,7 +602,7 @@ form {
 }
 
 [popover]::backdrop {
-  animation: backdrop-open 0.25s forwards;
+  /* animation: backdrop-open 0.25s forwards; */
 }
 
 /* 
@@ -587,7 +621,7 @@ Grid of leuke animaties voor popover
   }
 }
 
-@keyframes open {
+/* @keyframes open {
   0% {
     height: 0;
     transform: scale(0);
@@ -604,9 +638,9 @@ Grid of leuke animaties voor popover
   100% {
     height: max-content;
   }
-}
+} */
 
-@keyframes backdrop-open {
+/* @keyframes backdrop-open {
   from {
     backdrop-filter: blur(0px);
     background-color: rgba(101, 101, 101, 0);
@@ -615,4 +649,4 @@ Grid of leuke animaties voor popover
     backdrop-filter: blur(10px);
     background-color: rgba(101, 101, 101, 0.283);
   }
-}
+} */
