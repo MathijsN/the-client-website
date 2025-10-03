@@ -254,7 +254,6 @@ header {
     place-self: end start;
     z-index: 1;
 
-    margin: calc(var(--tmplt-size-whitespace) * 0.5);
     padding: 0.25em;
     line-height: 1;
 
@@ -602,7 +601,7 @@ form {
 }
 
 [popover]::backdrop {
-  /* animation: backdrop-open 0.25s forwards; */
+  animation: backdrop-open 0.25s forwards;
 }
 
 /* 
@@ -640,7 +639,7 @@ Grid of leuke animaties voor popover
   }
 } */
 
-/* @keyframes backdrop-open {
+@keyframes backdrop-open {
   from {
     backdrop-filter: blur(0px);
     background-color: rgba(101, 101, 101, 0);
@@ -649,4 +648,4 @@ Grid of leuke animaties voor popover
     backdrop-filter: blur(10px);
     background-color: rgba(101, 101, 101, 0.283);
   }
-} */
+}
