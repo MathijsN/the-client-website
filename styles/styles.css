@@ -126,10 +126,6 @@ header {
   @media (width > 469px) {
     display: flex;
     justify-content: space-between;
-
-    /* ul:nth-of-type(2) {
-      text-align: right;
-    } */
   }
 
   ul:nth-of-type(1),
@@ -143,8 +139,14 @@ header {
     }
   }
 
+  ul:nth-of-type(2) {
+    @media (width > 468px) {
+      text-align: end;
+    }
+  }
+
   li {
-    margin: 1rem;
+    margin: 0.25rem 1rem;
   }
 
   .scroll-indicator {
