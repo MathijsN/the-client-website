@@ -78,3 +78,22 @@
             }
     }
 }
+
+
+
+
+.flying-button {
+    position: fixed;
+    bottom: 1rem;
+    left: 1.5rem;
+    z-index: 1;
+    padding: 1rem 6rem 1rem 2rem;
+    border: 3px solid gray;
+    border-radius: 5rem;
+    background-image: url(../assets/chevron-right.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+}
