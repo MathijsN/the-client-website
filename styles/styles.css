@@ -333,9 +333,9 @@ form {
 }
 
 .botm-wrapper {
-  display: flex;
   justify-content: end;
   gap: 2rem;
+  overscroll-behavior-inline: contain;
 
   a {
     display: grid;
