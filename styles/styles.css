@@ -96,10 +96,7 @@ header {
     font-weight: 500;
     font-size: clamp(2rem, 10vw, 10rem);
     max-width: 50rem;
-
     margin: 0 0 1rem 1rem;
-
-    /* display: none; */
 
     @media (width > 672px) {
       display: block;
