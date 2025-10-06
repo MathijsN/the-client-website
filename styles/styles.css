@@ -41,7 +41,7 @@ header {
   position: sticky;
   top: 0;
 
-  a + img {
+  a+img {
     @media (width > 672px) {
       display: none;
     }
@@ -53,6 +53,7 @@ header {
     @media (width > 672px) {
       display: flex;
     }
+
     ul {
       display: flex;
 
@@ -164,23 +165,21 @@ header {
         padding: 1rem;
 
         animation: bounce 1s infinite;
-        animation-timing-function: linear(
-          0,
-          0.329 8.6%,
-          0.541 16%,
-          0.615 19.6%,
-          0.667 23.2%,
-          0.698 26.8%,
-          0.708 30.5%,
-          0.686 36.1%,
-          0.618 42.3%,
-          0.229 64.6%,
-          0.093 74.8%,
-          0.048 80.2%,
-          0.018 85.8%,
-          0.004 91.9%,
-          0
-        );
+        animation-timing-function: linear(0,
+            0.329 8.6%,
+            0.541 16%,
+            0.615 19.6%,
+            0.667 23.2%,
+            0.698 26.8%,
+            0.708 30.5%,
+            0.686 36.1%,
+            0.618 42.3%,
+            0.229 64.6%,
+            0.093 74.8%,
+            0.048 80.2%,
+            0.018 85.8%,
+            0.004 91.9%,
+            0);
       }
     }
   }
@@ -214,6 +213,7 @@ h1 {
   @media (width > 350px) {
     font-size: clamp(3rem, 5vw, 4rem);
   }
+
   font-size: 2rem;
   font-weight: 300;
 }
@@ -245,7 +245,7 @@ form {
     margin-bottom: 1rem;
   }
 
-  > button {
+  >button {
     display: grid;
     grid-template-columns: 3fr 1fr;
     width: 100%;
@@ -286,13 +286,14 @@ form {
     background-color: white;
     border: 0;
   }
+
   button:nth-of-type(even):hover {
     @media (any-pointer: fine) {
       background-color: rgb(230, 230, 230);
     }
   }
 
-  > ul {
+  >ul {
     display: grid;
     grid-template-columns: 3fr 1fr;
     padding: 1rem;
@@ -323,82 +324,31 @@ form {
 
 
 [popover] {
-  transition: 
-  opacity 0.5s ease-out, 
-  height 0.5s allow-discrete,
-  scale 0.5s ease,
-  display 0.5s allow-discrete;
-  
-  
+  transition:
+    opacity 0.5s ease-out,
+    height 0.5s allow-discrete,
+    scale 0.5s ease,
+    display 0.5s allow-discrete;
+
+
   opacity: 0;
   height: 0;
   scale: 0;
   backdrop-filter: blur(0);
   background-color: rgba(101, 101, 101, 0);
-  overflow:hidden;
-}
+  overflow: hidden;
+  transform-origin: bottom center;
 
-
-[popover]:popover-open {
-  background-color: #f4f4f4;
-  padding: 1rem;
-  border: 0;
-  width: 100vw;
   position: fixed;
   inset: auto;
   left: 0;
   bottom: 0;
-  display: grid;
-/* 
-  animation: open 0.5s forwards;
-  transform-origin: bottom center;
-  overflow: hidden; */
-
-  transform-origin: bottom center;
-
-  opacity: 1;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border: 0;
+  width: 100vw;
   height: max-content;
-  scale: 1;
-  
-  overflow:hidden;
-  
-  @starting-style {
-    opacity: 0;
-    height: 0;
-    scale: 0;
-  }
-
-
-
-  @media (width > 789px) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-
-    .popover-cta-wrapper {
-      display: grid;
-      justify-content: end;
-    }
-  }
-
-  .popover-heading-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    border-bottom: 1px solid var(--color-blue);
-    margin-bottom: 2rem;
-    height: max-content;
-    grid-column: 1 / -1;
-
-    > button {
-      border: 0;
-      background-color: #f4f4f4;
-
-      @media (any-pointer: fine) {
-        cursor: pointer;
-      }
-    }
-  }
+  overflow: hidden;
 
   h2 {
     font-size: 1rem;
@@ -413,7 +363,7 @@ form {
     margin: 0;
   }
 
-  > ul {
+  ul {
     margin-bottom: 2rem;
     justify-self: left;
 
@@ -459,10 +409,68 @@ form {
       justify-self: end;
     }
   }
+
+  @media (width > 789px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    .popover-cta-wrapper {
+      display: grid;
+      justify-content: end;
+    }
+  }
+
+  .popover-heading-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid var(--color-blue);
+    margin-bottom: 2rem;
+    height: max-content;
+    grid-column: 1 / -1;
+
+    >button {
+      border: 0;
+      background-color: #f4f4f4;
+
+      @media (any-pointer: fine) {
+        cursor: pointer;
+      }
+    }
+  }
 }
 
+
+[popover]:popover-open {
+  /* 
+  animation: open 0.5s forwards;
+  transform-origin: bottom center;
+  overflow: hidden; */
+
+  opacity: 1;
+  scale: 1;
+
+  @starting-style {
+    opacity: 0;
+    height: 0;
+    scale: 0;
+  }
+
+}
+
+.popover-grid-container {
+  display: grid;
+
+  @media (width > 789px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+
 [popover]::backdrop {
-  animation: backdrop-open 0.5s forwards;
+  animation: backdrop-open 1s forwards;
 }
 
 /* 
@@ -476,6 +484,7 @@ Grid of leuke animaties voor popover
   from {
     transform: translateY(0);
   }
+
   to {
     transform: translateY(1rem);
   }
@@ -505,6 +514,7 @@ Grid of leuke animaties voor popover
     backdrop-filter: blur(0px);
     background-color: rgba(101, 101, 101, 0);
   }
+
   to {
     backdrop-filter: blur(10px);
     background-color: rgba(101, 101, 101, 0.283);
