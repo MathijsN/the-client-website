@@ -326,25 +326,31 @@ form {
 
 .botm-section {
   margin: 5rem 1rem 1rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
 }
 
 .botm-wrapper {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  gap: 1rem;
+  justify-content: end;
+  gap: 2rem;
 
   a {
-    color: var(--color-blue);
-    text-decoration: none;
     display: grid;
-    grid-template-columns:90% 1fr;
-    grid-template-rows: 1fr 50px;
+    grid-template-columns: 80% 1fr;
+    grid-template-rows: min-content min-content;
+    text-decoration: none;
+    color: var(--color-blue);
+    width: 40rem;
 
     img {
-      width: 100%;
       grid-column: span 2;
       grid-row: 1 / 2;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
     }
 
     h3 {
@@ -352,20 +358,19 @@ form {
       grid-row: 2 / 3;
       align-self: center;
       font-size: 1rem;
+      margin-top: 1rem;
     }
 
     .pointer {
-      width: 16px;
-      transform: rotate(-90deg);
-      display: block;
       grid-column: 2 / 3;
       grid-row: 2 / 3;
       justify-self: end;
-      align-self: center;
+      width: 16px;
+      transform: rotate(-90deg);
+      margin-top: 1rem;
     }
   }
 }
-
 
 
 /* Popover */
