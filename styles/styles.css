@@ -320,6 +320,54 @@ form {
   }
 }
 
+
+
+/* Books of the month */
+
+.botm-section {
+  margin: 5rem 1rem 1rem;
+}
+
+.botm-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 1rem;
+
+  a {
+    color: var(--color-blue);
+    text-decoration: none;
+    display: grid;
+    grid-template-columns:90% 1fr;
+    grid-template-rows: 1fr 50px;
+
+    img {
+      width: 100%;
+      grid-column: span 2;
+      grid-row: 1 / 2;
+    }
+
+    h3 {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      align-self: center;
+      font-size: 1rem;
+    }
+
+    .pointer {
+      width: 16px;
+      transform: rotate(-90deg);
+      display: block;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      justify-self: end;
+      align-self: center;
+    }
+  }
+}
+
+
+
 /* Popover */
 
 
@@ -473,13 +521,6 @@ form {
   animation: backdrop-open 1s forwards;
 }
 
-/* 
-Tip van Rick
-
-Grid of leuke animaties voor popover
-
-*/
-
 @keyframes bounce {
   from {
     transform: translateY(0);
@@ -490,24 +531,6 @@ Grid of leuke animaties voor popover
   }
 }
 
-/* @keyframes open {
-  0% {
-    height: 0;
-    transform: scale(0);
-    display: none;
-  }
-  1% {
-    display: grid;
-  }
-
-  75% {
-    transform: scale(1);
-  }
-
-  100% {
-    height: max-content;
-  }
-} */
 
 @keyframes backdrop-open {
   from {
