@@ -18,7 +18,8 @@ De instructie van deze leertaak staan in de [INSTRUCTIONS](https://github.com/fd
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
-<img width="2509" height="2130" alt="Frame 1" src="https://github.com/user-attachments/assets/fff3f5ca-cef9-4822-847f-921c0723bcf0" />
+<img width="2200" height="2130" alt="layout" src="https://github.com/user-attachments/assets/861958cb-4fb9-4b93-938b-88c3c5828258" />
+
 
 
 https://mathijsn.github.io/the-client-website/
