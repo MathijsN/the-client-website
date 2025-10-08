@@ -20,7 +20,6 @@
 }
 
 body {
-  /* padding-inline: 1rem; */
   font-family: sans-serif;
   color: var(--color-blue);
   line-height: 1.4;
@@ -50,11 +49,13 @@ header {
   justify-content: space-between;
   width: 100%;
   padding: 1rem 1.5rem 0.5rem 1.5rem;
-  position: sticky;
-  top: 0;
+  position: relative;
   background-color: white;
   align-items: center;
-  font-size: 0.8rem;
+
+
+
+
 
   >img {
     z-index: 10;
