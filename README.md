@@ -25,7 +25,7 @@ De instructie van deze leertaak staan in de [INSTRUCTIONS](https://github.com/fd
 
 https://mathijsn.github.io/the-client-website/
 
-This website contains a homepage with a hero sectiona and a 'books of the month' section, and the catalogue page with multiple example books.
+This website contains a homepage with a hero section and a 'books of the month' section, and the catalogue page with multiple example books.
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
