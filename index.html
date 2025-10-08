@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalogue</title>
     <link rel="stylesheet" href="styles/styles.css" />
+    <script src="../scripts/script.js" defer></script>
   </head>
   <body>
     <header>
-      <a href="homepage.html">
-        <img src="assets/small.png" alt="Logo of Embassy of the free mind"/>
-      </a>
-      <img src="assets/hamburger-icon.svg" alt="Hamburger menu icon" />
-      <nav>
+      <a href="homepage.html"
+        ><img src="../assets/small.png" alt="Logo of Embassy of the free mind"
+      /></a>
+      <img src="../assets/hamburger-icon.svg" alt="Hamburger menu icon" />
+      <nav class="">
         <ul>
           <li><a href="#">EOTFM</a></li>
           <li><a href="#">Museum</a></li>
           <li><a href="#">Academy</a></li>
-          <li><a href="index.html">Collection</a></li>
+          <li><a href="../index.html">Collection</a></li>
           <li><a href="#">Research</a></li>
         </ul>
       </nav>
@@ -48,6 +49,40 @@
           <li>Author</li>
           <li>Year</li>
         </ul>
+        <button popovertarget="my-popover">
+          <span>Le comte de Gabalis ou entretiens sur les sciences secrètes. Précédé de Magie et dillettantisme 'Le roman de Montfaucon de Villars' et l'Histoire de 'la Rôtisserie de la reine Pédauque' [...] et l'Esoterisme de Gabalis</span>
+          <span>[Villars, Nicolas de Montfaucon de], Doyon, René Louis, Marteau, Paul</span>
+          <span>1921</span>
+        </button>
+        <section popover id="my-popover">
+          <div class="popover-grid-container">
+            <div class="popover-heading-wrapper">
+              <h2>Info</h2>
+              <button popovertargetaction="hide" popovertarget="my-popover">
+                <img src="assets/exit.svg" alt="" />
+              </button>
+            </div>
+            <p>Das Buch vom lebendigen Gott</p>
+            <ul>
+              <li>Year: 1556</li>
+              <li>Author: Frank, Benjamin</li>
+              <li>Genre: Fiction</li>
+              <li>UBN: 12307</li>
+              <li>Redactor: Faleti, Girolamo</li>
+              <li>Place of publication: Venice</li>
+              <li>Keywords: gnosis</li>
+              <li>Shelf mark: Gn J, II</li>
+              <li>BPH State Collection shelf mark: no</li>
+            </ul>
+            <div class="popover-cta-wrapper">
+              <img
+                src="assets/book-img-placeholder.png"
+                alt="image of the digitalized version of the book"
+              />
+              <a href="#">More info</a>
+            </div>
+          </div>
+        </section>
         <button popovertarget="my-popover">
           <span>Das Buch vom lebendigen Gott</span>
           <span>Frank, Benjamin</span>

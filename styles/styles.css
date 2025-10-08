@@ -27,20 +27,20 @@ body {
 }
 
 .flying-button {
-    position: fixed;
-    bottom: 1rem;
-    left: 1.5rem;
-    z-index: 1;
-    padding: 1rem 6rem 1rem 2rem;
-    border: 2px solid var(--color-blue);
-    border-radius: 5rem;
-    background-image: url(../assets/chevron-right.svg);
-    background-repeat: no-repeat;
-    background-position: 90% 50%;
-    color: var(--color-blue);
-    background-color: white;
-    text-decoration: none;
-    filter: drop-shadow(0px 0px 6px #5b5b5b43);
+  position: fixed;
+  bottom: 2rem;
+  left: 1.5rem;
+  z-index: 1;
+  padding: 1rem 6rem 1rem 2rem;
+  border: 2px solid var(--color-blue);
+  border-radius: 5rem;
+  background-image: url(../assets/chevron-right.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  color: var(--color-blue);
+  background-color: white;
+  text-decoration: none;
+  filter: drop-shadow(0px 0px 6px #5b5b5b43);
 }
 
 /* Navigation bar */
@@ -48,40 +48,75 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  /* border-bottom: 1px solid var(--color-blue); */
-  background-color: rgb(255, 255, 255);
-  filter: drop-shadow(0px 5px 6px #5b5b5b43);
-
-  z-index: 1;
+  width: 100%;
+  padding: 1rem 1.5rem 0.5rem 1.5rem;
   position: sticky;
   top: 0;
+  background-color: white;
+  align-items: center;
+  font-size: 0.8rem;
 
-  a+img {
+  >img {
+    z-index: 10;
+    width: 16px;
+
     @media (width > 672px) {
       display: none;
     }
   }
 
   nav {
+    translate: -100%;
     display: none;
 
     @media (width > 672px) {
       display: flex;
+      translate: 0;
     }
 
     ul {
-      display: flex;
+      @media (width > 672px) {
+        display: flex;
+      }
 
       li {
-        margin-inline: 1rem;
-        list-style: none;
+        @media (width > 672px) {
+          margin-inline: 1rem;
+          list-style: none;
+        }
 
         a {
+          @media (width > 672px) {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  nav.open {
+    position: absolute;
+    inset: 0;
+    background-color: bisque;
+    display: block;
+    translate: 0;
+    z-index: 5;
+
+    ul {
+      height: 100%;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      padding: 0;
+
+      li {
+        a {
           text-decoration: none;
-          color: black;
+
         }
       }
     }
