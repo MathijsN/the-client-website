@@ -35,9 +35,9 @@ This website contains a homepage with a hero sectiona and a 'books of the month'
 - [x] Catalogue page
 - [x] Smooth animations
 
-HTML - Structuur
-CSS - Styling
-JS - Interactie
+- HTML - Structuur
+- CSS - Styling
+- JS - Interactie
 
 ## Licentie
 
