@@ -18,7 +18,8 @@ De instructie van deze leertaak staan in de [INSTRUCTIONS](https://github.com/fd
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
-<img width="2200" height="2130" alt="layout" src="https://github.com/user-attachments/assets/861958cb-4fb9-4b93-938b-88c3c5828258" />
+
+<img width="2200" height="2130" alt="layout 2" src="https://github.com/user-attachments/assets/d6f42c84-0e90-401a-9cfb-39176005b9b4" />
 
 
 
