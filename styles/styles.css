@@ -113,7 +113,7 @@ header {
   nav.open {
     position: absolute;
     inset: 0;
-    background-color: #BF9A5D;
+    background-color: white;
     display: block;
     translate: 0;
     z-index: 5;
@@ -131,6 +131,7 @@ header {
       li {
         a {
           text-decoration: none;
+          color: var(--color-blue);
         }
       }
     }
@@ -140,6 +141,8 @@ header {
 /* Hero section main page */
 
 .hero {
+  margin-top: 1rem;
+
   @media (width > 1279px) {
     display: flex;
     height: 85vh;
